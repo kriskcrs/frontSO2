@@ -1,0 +1,30 @@
+<body class="m-© vh-100 row justify-content-center align-items-center">
+<div class="container">
+  <div class="row justify-content-center">
+
+    <!--formulario-->
+    <div class="col-3 text-center">
+      <h5>¡Bienvenido!</h5>
+      <br>
+      <form class="login-form" (ngSubmit)="formulariologin()" id="loginForm">
+        <div class="col-auto">
+          <input type="text" class="form-control" aria-describedby="passwordHelpInline" placeholder="Usuario" style="text-transform:uppercase;"
+                 [(ngModel)]="user.usuario" [ngModelOptions]="{standalone: true}" required>
+        </div>
+        <br>
+        <div class="col-auto">
+          <input type="password" class="form-control" aria-describedby="passwordHelpInline" placeholder="Contraseña"
+                 [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" required>
+        </div>
+        <br>
+        <button type="submit" class="btn form-control">Iniciar Sesión</button>
+      </form>
+      <!--      <a (click)="crearUsuario()" class="round-border">Crear usuario</a>-->
+      <br><br>
+      <div  *ngIf="usuarioInvalido"  class="alert alert-danger" role="alert">
+        {{msjUsuarioInvalido}}
+      </div>
+    </div>
+  </div>
+</div>
+</body>
