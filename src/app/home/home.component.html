@@ -7,9 +7,6 @@
 <body>
 <div class="main">
   <div class="navbar">
-    <div class="icon">
-      <h2 class="logo"><a href="home"> ArrowFast</a></h2>
-    </div>
 
     <div class="menu">
       <ul>
@@ -33,21 +30,17 @@
             <th class="encabezado" scope="col">DPI</th>
             <th class="encabezado" scope="col">Codigo del departamento</th>
             <th class="encabezado" scope="col">Codigo del puesto</th>
-            <th class="encabezado" scope="col">Codigo del remitente </th>
           </tr>
           </thead>
-          <tbody>
-          <tr *ngFor="let reservacion of reservaciones " >
-            <th scope="row">{{reservacion.idEmpleado}}</th>
-            <td>{{reservacion.nombre}}</td>
-            <td>{{reservacion.apellido}}</td>
-            <td>{{reservacion.fechaNacimiento |date:'yyyy-MM-dd'}}</td>
-            <td>{{reservacion.dpi}}</td>
-            <td>{{reservacion.departamentoIddepartamento}}</td>
-            <td>{{reservacion.puestoIdpuesto}}</td>
-            <td>{{reservacion.idRemitente}}</td>
+          <tr *ngFor="let empleado of empleados " >
+            <th scope="row">{{empleado.idEmpleado}}</th>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.fechaNacimiento |date:'yyyy-MM-dd'}}</td>
+            <td>{{empleado.dpi}}</td>
+            <td>{{empleado.departamentoIddepartamento}}</td>
+            <td>{{empleado.puestoIdpuesto}}</td>
           </tr>
-          </tbody>
         </table>
       </div>
     </div>

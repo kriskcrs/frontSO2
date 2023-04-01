@@ -8,29 +8,20 @@ import {catchError} from "rxjs/operators";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  user:any=[]
-  reservaciones1:any = []
-  reservaciones2:any = []
-  reservaciones:any = []
+  empleados:any = []
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.user = localStorage.getItem("user");
-    console.log(this.reservaciones[1])
-    console.log(this.reservaciones1)
-    console.log(this.reservaciones2)
-    /*if(){
 
-    }*/
 
-    this.consultarEncomiendas().subscribe(
+    this.consultaEmpleados().subscribe(
       (respuesta:any) => this.RecibioRespuesta(respuesta)
     )
   }
 
 
-  consultarEncomiendas(){
+  consultaEmpleados(){
     var httpOptions={
       headers:new HttpHeaders({
         'Content-Type':'application/json'
@@ -43,7 +34,8 @@ export class HomeComponent implements OnInit {
   }
 
   RecibioRespuesta(res:any){
-    this.reservaciones = res
-    this.reservaciones1 = res
+    this.empleados = res
+    console.log(res)
+    console.log(this.empleados)
   }
 }
