@@ -41,12 +41,11 @@
             <th scope="row">{{reservacion.idEmpleado}}</th>
             <td>{{reservacion.nombre}}</td>
             <td>{{reservacion.apellido}}</td>
-            <td><time datetime="YYYY-MM-DDTHH:MM:SSZ">{{reservacion.fechaNacimiento}}</time></td>
+            <td>{{reservacion.fechaNacimiento |date:'yyyy-MM-dd'}}</td>
             <td>{{reservacion.dpi}}</td>
             <td>{{reservacion.departamentoIddepartamento}}</td>
             <td>{{reservacion.puestoIdpuesto}}</td>
             <td>{{reservacion.idRemitente}}</td>
-            <time datetime="2023-03-31T12:00:00Z">31 de marzo de 2023, 12:00 pm</time>
           </tr>
           </tbody>
         </table>
