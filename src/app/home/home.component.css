@@ -1,3 +1,9 @@
+/* Estilo general de la tabla */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto; /* Agregamos esta línea para centrar horizontalmente */
+}
 body{
   margin: 0;
   padding: 0;
@@ -8,326 +14,70 @@ body{
   right: 0;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+.btn-cerrar {
+  background-color: white; /* Establecemos el color de fondo */
+  color: white; /* Establecemos el color del texto */
+  border: none; /* Quitamos el borde */
+  padding: 10px 20px; /* Agregamos un poco de espacio alrededor del texto */
+  border-radius: 5px; /* Redondeamos las esquinas del botón */
+  text-decoration: none; /* Quitamos la subraya al texto */
+  cursor: pointer; /* Cambiamos el cursor al pasar el mouse sobre el botón */
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
+.btn-cerrar:hover {
+  background-color: black; /* Establecemos el color de fondo al pasar el mouse */
+  color: white;
 }
 
-th {
-  background-color: #333;
-  color: #fff;
-}
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ddd;
-}
-
-.main{
-  background: url(https://img.freepik.com/vector-gratis/fondo-futurista-tecnologia-degradada_23-2149122416.jpg?w=2000);
-  overflow: hidden;
-  height: 100vh;
-}
-
-.navbar{
-  width: 100%;
-  height: 75px;
-  margin: 0 auto;
-  background-color: rgba(48, 46, 46, 0.856);
-  padding-right: 20px;
-  margin-bottom: 100px;
-
-}
-
-.icon{
-  width: 200px;
-  float: left;
-  height: 70px;
-}
-
-.logo{
-  padding-left: 20px;
-  float: left;
-  padding-top: 10px;
-  margin-top: 5px;
-
-}
-
-.icon a{
-  text-decoration: none;
-  color: #ff7200;
-  font-size: 35px;
-  font-family: Arial;
-}
-
-.menu{
-
-  float: left;
-  height: 70px;
-}
-
-ul{
-  float: left;
+section{
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url(https://www.analyticslane.com/storage/2020/07/smoke.jpg)no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
 }
 
-ul li{
-  list-style: none;
-  margin-left: 62px;
-  margin-top: 27px;
-  font-size: 14px;
+
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto es opcional, para que la tabla ocupe toda la altura de la ventana */
 }
 
-ul li a{
-  text-decoration: none;
-  color: #fff;
-  font-family: Arial;
+
+/* Estilo de la leyenda de la tabla */
+.caption-top {
+  caption-side: top;
+  text-align: center;
+  font-size: 1.5em;
   font-weight: bold;
-  transition: 0.4s ease-in-out;
+  padding: 1em;
+  background-color: #f0f0f0;
 }
 
-ul li a:hover{
-  color: #ff7200;
-}
-
-
-.btn{
-  width: 100px;
-  height: 40px;
-  background: #ff7200;
-  border: 2px solid #ff7200;
-  margin-top: 13px;
-  color: #fff;
-  font-size: 15px;
-  border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  transition: 0.2s ease;
-  cursor: pointer;
-}
-.btn:hover{
-  color: #000;
-}
-
-.btn:focus{
-  outline: none;
-}
-
-.srch:focus{
-  outline: none;
-}
-
-.content{
-  width: 1200px;
-  height: auto;
-  margin: auto;
-  color: #fff;
-  position: relative;
-}
-
-.content .par{
-  padding-left: 20px;
-  padding-bottom: 25px;
-  font-family: Arial;
-  letter-spacing: 1.2px;
-  line-height: 30px;
-}
-
-.content h1{
-  font-family: 'Times New Roman';
-  font-size: 50px;
-  padding-left: 20px;
-  margin-top: 9%;
-  letter-spacing: 2px;
-}
-
-.content .cn{
-  width: 160px;
-  height: 40px;
-  background: #ff7200;
-  border: none;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: .4s ease;
-
-}
-
-.content .cn a{
-  text-decoration: none;
-  color: #000;
-  transition: .3s ease;
-}
-
-.cn:hover{
-  background-color: #fff;
-}
-
-.content span{
-  color: #ff7200;
-  font-size: 65px
-}
-
-.form{
-  width: 250px;
-  height: 380px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-  position: absolute;
-  top: -20px;
-  left: 870px;
-  transform: translate(0%,-5%);
-  border-radius: 10px;
-  padding: 25px;
-}
-
-.form h2{
-  width: 220px;
-  font-family: sans-serif;
+/* Estilo de las celdas del encabezado de la tabla */
+thead th {
   text-align: center;
-  color: #ff7200;
-  font-size: 22px;
-  background-color: #fff;
-  border-radius: 10px;
-  margin: 2px;
-  padding: 8px;
+  padding: 0.5em;
+  background-color: #e5e5e5;
+  border: 1px solid #ccc;
 }
 
-.form input{
-  width: 240px;
-  height: 35px;
-  background: transparent;
-  border-bottom: 1px solid #ff7200;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  color: #fff;
-  font-size: 15px;
-  letter-spacing: 1px;
-  margin-top: 30px;
-  font-family: sans-serif;
+/* Estilo de las celdas del cuerpo de la tabla */
+tbody td {
+  padding: 0.5em;
+  border: 1px solid #ccc;
 }
 
-.form input:focus{
-  outline: none;
-}
-
-::placeholder{
-  color: #fff;
-  font-family: Arial;
-}
-
-.btnn{
-  width: 240px;
-  height: 40px;
-  background: #ff7200;
-  border: none;
-  margin-top: 30px;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #fff;
-  transition: 0.4s ease;
-}
-.btnn:hover{
-  background: #fff;
-  color: #ff7200;
-}
-.btnn a{
-  text-decoration: none;
-  color: #000;
+/* Estilo de la primera columna de la tabla */
+tbody th[scope="row"] {
   font-weight: bold;
-}
-.form .link{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
-  padding-top: 20px;
-  text-align: center;
-}
-.form .link a{
-  text-decoration: none;
-  color: #ff7200;
-}
-.liw{
-  padding-top: 15px;
-  padding-bottom: 10px;
-  text-align: center;
-}
-.icons a{
-  text-decoration: none;
-  color: #fff;
-}
-.icons ion-icon{
-  color: #fff;
-  font-size: 30px;
-  padding-left: 14px;
-  padding-top: 5px;
-  transition: 0.3s ease;
-}
-.icons ion-icon:hover{
-  color: #ff7200;
-}
-.grid-container{
-  max-width: 980px;
-  margin: auto;
-}
-.grid-container h3, h4, p{
-  color: white;
-}
-.grid-container h3{
-  border-bottom: 1px solid #cdd2da;
-  padding-bottom: 35px;
-  text-align: center;
-}
-.projects-main-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.projects-main-container{
-  padding: 0 05px;
-}
-.encabezado01{
-  color: white;
-}
-
-.encabezado{
-  color: white;
-  background-color: black;
-}
-tbody th:nth-child(1) {
-  color: white;
-}
-tbody td:nth-child(1) {
-  color: white;
-}
-tbody td:nth-child(2) {
-  color: white;
-}
-tbody td:nth-child(3) {
-  color: white;
-}
-tbody td:nth-child(4) {
-  color: white;
-}
-tbody td:nth-child(5) {
-  color: white;
-}
-tbody td:nth-child(6) {
-  color: white;
-}
-tbody td:nth-child(7) {
-  color: white;
-}
-tbody td:nth-child(8) {
-  color: white;
+  background-color: #f0f0f0;
 }

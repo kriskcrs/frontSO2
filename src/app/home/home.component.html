@@ -1,50 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Realizarreservaciones</title>
-  <link rel="stylesheet" href="home.component.css">
-</head>
 <body>
-<div class="main">
-  <div class="navbar">
-
-    <div class="menu">
-      <ul>
-        <li><a href="home">HOME</a></li>
-        <li><a href="#">Cerrar Sesion</a></li>
-      </ul>
-    </div>
-
-  </div>
-  <div class="grid-container">
-    <h3>Empleados</h3>
-    <div class="row">
-      <div class="table01 col-12">
-        <table class="table table-striped">
-          <thead  class="borde">
-          <tr>
-            <th class="encabezado" scope="col">Codigo de empleado</th>
-            <th class="encabezado" scope="col">Nombre</th>
-            <th class="encabezado" scope="col">Apellido</th>
-            <th class="encabezado" scope="col">Fecha de Nacimiento</th>
-            <th class="encabezado" scope="col">DPI</th>
-            <th class="encabezado" scope="col">Codigo del departamento</th>
-            <th class="encabezado" scope="col">Codigo del puesto</th>
-          </tr>
-          </thead>
-          <tr *ngFor="let empleado of empleados " >
-            <th scope="row">{{empleado.idEmpleado}}</th>
-            <td>{{empleado.nombre}}</td>
-            <td>{{empleado.apellido}}</td>
-            <td>{{empleado.fechaNacimiento |date:'yyyy-MM-dd'}}</td>
-            <td>{{empleado.dpi}}</td>
-            <td>{{empleado.departamentoIddepartamento}}</td>
-            <td>{{empleado.puestoIdpuesto}}</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
+<button class="btn-cerrar"><a href="#">Cerrar Sesion</a></button>
+<div class="table-container">
+  <section>
+    <table class="table caption-top">
+      <thead  class="borde">
+      <tr>
+        <th class="encabezado" scope="col">Codigo de empleado</th>
+        <th class="encabezado" scope="col">Nombre</th>
+        <th class="encabezado" scope="col">Apellido</th>
+        <th class="encabezado" scope="col">Fecha de Nacimiento</th>
+        <th class="encabezado" scope="col">DPI</th>
+        <th class="encabezado" scope="col">Codigo del departamento</th>
+        <th class="encabezado" scope="col">Codigo del puesto</th>
+      </tr>
+      </thead>
+      <tr *ngFor="let empleado of empleados " >
+        <th scope="row">{{empleado.idEmpleado}}</th>
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.apellido}}</td>
+        <td>{{empleado.fechaNacimiento |date:'yyyy-MM-dd'}}</td>
+        <td>{{empleado.dpi}}</td>
+        <td>{{empleado.departamentoIddepartamento}}</td>
+        <td>{{empleado.puestoIdpuesto}}</td>
+      </tr>
+    </table>
+  </section>
 </div>
 </body>
-</html>

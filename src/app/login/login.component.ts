@@ -16,6 +16,7 @@ export class LoginComponent {
   msjUsuarioInvalido: String = "El usuario o contraseña son incorrectas."
 
 
+
   constructor(private http: HttpClient) {
   }
 
@@ -31,6 +32,7 @@ export class LoginComponent {
     console.log("entro en formulario")
     let formularioValido: any = document.getElementById("loginForm");
 
+
     if (formularioValido.reportValidity()) {
 
       //llamada al servicio de login
@@ -40,12 +42,12 @@ export class LoginComponent {
     }
   }
   servicioLogin() {
-    console.log(this.user.usuario)
+
     if(this.user.usuario !== undefined ){
       this.user.usuario = this.user.usuario.toUpperCase()
-      console.log(this.user)
+
     }else{
-      console.log("valor no definido")
+      console.log("no existe en la db")
     }
 
     var httpOptions = {
@@ -62,7 +64,7 @@ export class LoginComponent {
 
     if (res != null) {
       //recibido
-      console.log("OK")
+
       res = JSON.parse(JSON.stringify(res))
       console.log(res)
 
@@ -73,7 +75,6 @@ export class LoginComponent {
         res = null
         location.href = "/home";
       }else{
-        console.log("Entro en el null")
         // Fallo por -> 'estado'
         this.usuarioInvalido = true
 
@@ -83,7 +84,6 @@ export class LoginComponent {
 
     } else if (res == "e") {
       alert("No hay comunicación con el servidor!!")
-
     }
   }
 
