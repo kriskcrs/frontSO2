@@ -1,1 +1,58 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Realizarreservaciones</title>
+  <link rel="stylesheet" href="home.component.css">
+</head>
+<body>
+<div class="main">
+  <div class="navbar">
+    <div class="icon">
+      <h2 class="logo"><a href="home"> ArrowFast</a></h2>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li><a href="home">HOME</a></li>
+        <li><a href="#">Cerrar Sesion</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="grid-container">
+    <h3>Empleados</h3>
+    <div class="row">
+      <div class="table01 col-12">
+        <table class="table table-striped">
+          <thead  class="borde">
+          <tr>
+            <th class="encabezado" scope="col">Codigo de empleado</th>
+            <th class="encabezado" scope="col">Nombre</th>
+            <th class="encabezado" scope="col">Apellido</th>
+            <th class="encabezado" scope="col">Fecha de Nacimiento</th>
+            <th class="encabezado" scope="col">DPI</th>
+            <th class="encabezado" scope="col">Codigo del departamento</th>
+            <th class="encabezado" scope="col">Codigo del puesto</th>
+            <th class="encabezado" scope="col">Codigo del remitente </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let reservacion of reservaciones " >
+            <th scope="row">{{reservacion.idEmpleado}}</th>
+            <td>{{reservacion.nombre}}</td>
+            <td>{{reservacion.apellido}}</td>
+            <td><time datetime="YYYY-MM-DDTHH:MM:SSZ">{{reservacion.fechaNacimiento}}</time></td>
+            <td>{{reservacion.dpi}}</td>
+            <td>{{reservacion.departamentoIddepartamento}}</td>
+            <td>{{reservacion.puestoIdpuesto}}</td>
+            <td>{{reservacion.idRemitente}}</td>
+            <time datetime="2023-03-31T12:00:00Z">31 de marzo de 2023, 12:00 pm</time>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
