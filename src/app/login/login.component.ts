@@ -29,23 +29,19 @@ export class LoginComponent {
 
   formulariologin() {
     this.usuarioInvalido = false
-    console.log("entro en formulario")
     let formularioValido: any = document.getElementById("loginForm");
-
-
     if (formularioValido.reportValidity()) {
-
       //llamada al servicio de login
       this.servicioLogin().subscribe(
         (respuesta: any) => this.login(respuesta)
       )
     }
   }
+
   servicioLogin() {
-
     if(this.user.usuario !== undefined ){
-      this.user.usuario = this.user.usuario.toUpperCase()
 
+      this.user.usuario = this.user.usuario.toUpperCase()
     }else{
       console.log("no existe en la db")
     }
@@ -60,38 +56,26 @@ export class LoginComponent {
     )
 
   }
+
   login(res: any) {
-
-    if (res != null) {
-      //recibido
-
-      res = JSON.parse(JSON.stringify(res))
-      console.log(res)
-
-      if(res.idUsuario != null && res.usuario != ""){
-        // Usuario OK
-        this.user = res
-        localStorage.setItem("user", JSON.stringify(this.user));
-        res = null
+    if(res =="e"){
+      alert("¡No hay comunicación con el servidor!")
+    }else{
+      if (res.idusuario != 0) {
+        res = JSON.parse(JSON.stringify(res))
+        localStorage.setItem("user", JSON.stringify(this.user))
         location.href = "/home";
       }else{
-        // Fallo por -> 'estado'
         this.usuarioInvalido = true
-
+        this.limpiar()
       }
-    } else if (res == null){
-      this.usuarioInvalido = true
-
-    } else if (res == "e") {
-      alert("No hay comunicación con el servidor!!")
     }
+
   }
 
   limpiar(){
     this.user = {};
     this.pass  = ""
-    this.usuarioInvalido = false;
-    this.msjUsuarioInvalido = "El usuario o contraseña son incorrectas."
   }
 
 
