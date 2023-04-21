@@ -1,83 +1,82 @@
-/* Estilo general de la tabla */
-.table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: auto; /* Agregamos esta línea para centrar horizontalmente */
-}
-body{
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
-.btn-cerrar {
-  background-color: white; /* Establecemos el color de fondo */
-  color: white; /* Establecemos el color del texto */
-  border: none; /* Quitamos el borde */
-  padding: 10px 20px; /* Agregamos un poco de espacio alrededor del texto */
-  border-radius: 5px; /* Redondeamos las esquinas del botón */
-  text-decoration: none; /* Quitamos la subraya al texto */
-  cursor: pointer; /* Cambiamos el cursor al pasar el mouse sobre el botón */
+header {
+  background-color: #588157;
+  color: #fff;
+  padding: 20px;
 }
 
-.btn-cerrar:hover {
-  background-color: black; /* Establecemos el color de fondo al pasar el mouse */
+header h1 {
   color: white;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+  float: right;
+}
+
+nav li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.right {
+  float: right;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section li {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+section li:last-child {
+  margin-right: 0;
+}
+
+section img {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+section h3, section p {
+  margin: 0;
 }
 
 
-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  background: url(https://www.analyticslane.com/storage/2020/07/smoke.jpg)no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-}
-
-
-
-.table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Esto es opcional, para que la tabla ocupe toda la altura de la ventana */
-}
-
-
-/* Estilo de la leyenda de la tabla */
-.caption-top {
-  caption-side: top;
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 1em;
-  background-color: #f0f0f0;
-}
-
-/* Estilo de las celdas del encabezado de la tabla */
-thead th {
-  text-align: center;
-  padding: 0.5em;
-  background-color: #e5e5e5;
-  border: 1px solid #ccc;
-}
-
-/* Estilo de las celdas del cuerpo de la tabla */
-tbody td {
-  padding: 0.5em;
-  border: 1px solid #ccc;
-}
-
-/* Estilo de la primera columna de la tabla */
-tbody th[scope="row"] {
-  font-weight: bold;
-  background-color: #f0f0f0;
-}
