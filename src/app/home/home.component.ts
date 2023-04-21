@@ -9,34 +9,38 @@ import {catchError} from "rxjs/operators";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  empleados:any = []
+  persona:any = []
+  usuario:any = {}
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-
-
-    this.consultaEmpleados().subscribe(
+    this.consultaPersona().subscribe(
       (respuesta:any) => this.RecibioRespuesta(respuesta)
     )
   }
 
 
-  consultaEmpleados(){
+  consultaPersona(){
+
+
+     this.usuario =    localStorage.getItem("user")
+    this.usuario =    JSON.parse(this.usuario)
+
+
     var httpOptions={
       headers:new HttpHeaders({
         'Content-Type':'application/json'
 
       })
     }
-    return this.http.get<any>("http://localhost:4043/empleado/consulta", httpOptions).pipe(
-      catchError(e=>"Error al realizar el el /findOne")
+    return this.http.get<any>("http://localhost:4043/usuario/consulta/" + this.usuario.usuario, httpOptions).pipe(
+      catchError(e=>"e")
     )
   }
 
   RecibioRespuesta(res:any){
-    this.empleados = res
-    console.log(res)
-    console.log(this.empleados)
+    this.persona = res
+    console.log(this.persona)
   }
 }

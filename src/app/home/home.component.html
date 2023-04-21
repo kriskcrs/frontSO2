@@ -1,29 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Bonita página </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    p {
+      color: #666;
+      font-size: 18px;
+      margin: 0;
+    }
+    .btn-cerrar {
+      background-color: #ff6347;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .btn-cerrar a {
+      color: #fff;
+      text-decoration: none;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 80%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 2px #888;
+    }
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    td:first-child {
+      width: 20%;
+      font-weight: bold;
+    }
+  </style>
+</head>
 <body>
-<button class="btn-cerrar"><a href="#">Cerrar Sesion</a></button>
-<div class="table-container">
-  <section>
-    <table class="table caption-top">
-      <thead  class="borde">
-      <tr>
-        <th class="encabezado" scope="col">Codigo de empleado</th>
-        <th class="encabezado" scope="col">Nombre</th>
-        <th class="encabezado" scope="col">Apellido</th>
-        <th class="encabezado" scope="col">Fecha de Nacimiento</th>
-        <th class="encabezado" scope="col">DPI</th>
-        <th class="encabezado" scope="col">Codigo del departamento</th>
-        <th class="encabezado" scope="col">Codigo del puesto</th>
-      </tr>
-      </thead>
-      <tr *ngFor="let empleado of empleados " >
-        <th scope="row">{{empleado.idEmpleado}}</th>
-        <td>{{empleado.nombre}}</td>
-        <td>{{empleado.apellido}}</td>
-        <td>{{empleado.fechaNacimiento |date:'yyyy-MM-dd'}}</td>
-        <td>{{empleado.dpi}}</td>
-        <td>{{empleado.departamentoIddepartamento}}</td>
-        <td>{{empleado.puestoIdpuesto}}</td>
-      </tr>
-    </table>
-  </section>
-</div>
+<table>
+  <tr>
+    <td><h1>Usuario</h1></td>
+    <td><p>{{usuario.usuario}}</p></td>
+  </tr>
+  <tr>
+    <td><h1>Nombre</h1></td>
+    <td><p>{{persona.nombre}}</p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><button class="btn-cerrar"><a href="#">Cerrar Sesion</a></button></td>
+  </tr>
+</table>
 </body>
+</html>
